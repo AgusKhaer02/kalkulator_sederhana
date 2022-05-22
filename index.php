@@ -12,7 +12,9 @@
 <body>
 
     <?php
+        // menetapkan variabel hasil sebagai null
         $hasil = null;
+        // cek apakah nilai post dengan index "number_input" tersedia
         if (isset($_POST['number_input'])) {
             $ni = $_POST['number_input'];
             try {
@@ -31,11 +33,13 @@
     <center>
         <h1>Kalkulator Sederhana</h1>
     </center>
+    <!-- form action dikosongkan supaya dapat mengirimkan nilai ke halaman sendiri -->
     <form action="" method="post">
         <table class="form-calc" >
             <thead>
                 <tr>
                     <td>
+                        <!-- onclick = ketika tombol ditekan maka panggil function setOnClickListener dengan karakter sebagai argument, function setOnClickListener bisa dilihat di app.js -->
                         <button class="btn btn-number" type="button" onclick="setOnClickListener('C')">C</button>
                     </td>
                     <td colspan="3"><input type="text" value="<?= (!empty($hasil)) ? $hasil : '' ?>" name="number_input" id="input" readonly></td>

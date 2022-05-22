@@ -1,4 +1,6 @@
+// select elemen dengan id "input"
 var input = document.getElementById("input");
+
 function setOnClickListener(val) {
 
     switch (val) {
